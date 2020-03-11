@@ -15,12 +15,16 @@
         <module name="feign" />
         <module name="hystrix" />
         <module name="ribbon" />
+        <module name="configserver" />
+        <module name="configclient" />
         <module name="consumer" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="configclient" options="-parameters" />
+      <module name="configserver" options="-parameters" />
       <module name="consumer" options="-parameters" />
       <module name="eureka-client" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
